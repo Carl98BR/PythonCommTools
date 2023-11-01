@@ -17,7 +17,7 @@ def pammod(signal, M, phi=0, symorder='bin'):
     gray_coded = np.argsort(np.bitwise_xor(m, np.right_shift(m, 1)))
     modulated_signal = constellation[gray_coded[signal]]
   else:
-    raise ValueError("Invalid type")
+    raise ValueError("Invalid symorder")
   
   # If the modulated signal is real (no imaginary part), cast it to integers
   if np.all(np.imag(modulated_signal) == 0):

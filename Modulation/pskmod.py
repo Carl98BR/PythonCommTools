@@ -1,3 +1,5 @@
+import numpy as np
+
 def pskmod(signal, M, phi=0, symorder='gray'):
     # Create a vector 'm' containing integers from 0 to M-1
     m = np.arange(0, M)

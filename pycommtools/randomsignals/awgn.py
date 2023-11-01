@@ -1,5 +1,5 @@
 import numpy as np
-import wgn
+from .wgn import wgn
 
 def awgn(x, snr, pwr=None, seed=None, powertype="dB"):
   # If pwr is not specified, set it to 0

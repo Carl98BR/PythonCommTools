@@ -1,8 +1,6 @@
 import numpy as np
 
 def int2bin(x, n, msbf=True):
-  # Import the NumPy library
-
   # Convert the integer 'x' to a binary representation with width 'n' using NumPy
   binary_repr = np.vectorize(lambda i: np.binary_repr(i, width=n))
 

@@ -1,3 +1,5 @@
+import numpy as np
+
 def pskdemod(signal, M, phi=0, symorder='gray'):
   # Check if 'symorder' is valid (either 'bin' or 'gray')
   if symorder.lower() not in ["bin", "gray"]:

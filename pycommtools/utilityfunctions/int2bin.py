@@ -8,7 +8,7 @@ def int2bin(x, n, msbf=True):
   binary_array = binary_repr(x)
 
   # Flatten the array in the specified order
-  flattened_array = binary_array.flatten('F')  # 'F' for Most Significant Bit First, 'C' for Least Significant Bit First
+  flattened_array = binary_array.flatten()
 
   # Convert the flattened array into a list of lists
   binary_list = [list(i) for i in flattened_array]

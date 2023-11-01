@@ -21,4 +21,7 @@ def int2bin(x, n, msbf=True):
     binary_matrix = np.flip(binary_matrix, axis=-1)
 
   # Return the matrix of binary representations
+  if len(binary_matrix) == 1:
+    return binary_matrix[0]
+
   return binary_matrix

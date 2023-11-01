@@ -1,3 +1,5 @@
+import numpy as np
+
 def pamdemod(modulated_signal, M, phi=0, symorder='bin'):
   # Check if 'symorder' is valid (either 'bin' or 'gray')
   if symorder.lower() not in ["bin", "gray"]:

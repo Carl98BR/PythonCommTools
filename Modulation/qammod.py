@@ -1,3 +1,5 @@
+import numpy as np
+
 def qammod(signal, M, symorder='gray'):
   # Check if M is a perfect square and a power of 2
   if not (M and (M & (M - 1) == 0) and int(np.sqrt(M)) == np.sqrt(M)):

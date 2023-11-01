@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.spatial.distance import cdist
+from .qammod import *
 
 def qamdemod(modulated_signal, M, symorder='gray'):
   # Create a QAM constellation based on the specified 'symorder'

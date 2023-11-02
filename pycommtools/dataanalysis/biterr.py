@@ -1,5 +1,6 @@
-  import numpy as np
-  
+import numpy as np
+from .utilityfinctions.int2bin import int2bin
+
 def biterr(x, y, k=None, flag=None):
   if x.ndim > 2 or y.ndim > 2:
     raise ValueError("Input arrays cannot have more than two dimensions.")

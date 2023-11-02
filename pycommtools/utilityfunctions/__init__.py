@@ -1,4 +1,4 @@
-from .bin2gay import *
+from .bin2gray import *
 from .bin2int import *
 from .int2bin import *
 from .gray2bin import *

@@ -20,9 +20,9 @@ def awgn(x, snr, pwr=None, seed=None, powertype="dB"):
   
   # Generate complex or real-valued noise based on the input signal x
   if np.iscomplexobj(x):
-    noise = wgn(x.shape[0], x.shape[1], noise_power, 1, seed, powertype, output="complex")
+    noise = wgn(m, noise_power, 1, seed, powertype, output="complex")
   else:
-    noise = wgn(x.shape[0], x.shape[1], noise_power, 1, seed, powertype, output="real")
+    noise = wgn(m, noise_power, 1, seed, powertype, output="real")
   
   # Add generated noise to the input signal x
   return x + noise

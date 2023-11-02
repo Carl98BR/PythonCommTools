@@ -1,6 +1,6 @@
 import numpy as np
 
-def wgn(p, imp=1, seed=None, powertype="dBW", output="real"):
+def wgn(m, p, imp=1, seed=None, powertype="dBW", output="real"):
   # Convert the input power level to linear scale based on powertype
   if powertype == "dB" or powertype == "dBW":
     p = 10**(p / 10)
@@ -19,8 +19,8 @@ def wgn(p, imp=1, seed=None, powertype="dBW", output="real"):
     return noiseReal
   elif output == "complex":
     # Generate complex-valued noise samples
-    noiseReal = np.random.normal(0, np.sqrt(variance / 2))
-    noiseImag = np.random.normal(0, np.sqrt(variance / 2))
+    noiseReal = np.random.normal(0, np.sqrt(variance / 2), m)
+    noiseImag = np.random.normal(0, np.sqrt(variance / 2), m)
     noiseComplex = noiseReal + 1j * noiseImag
     return noiseComplex
   else:

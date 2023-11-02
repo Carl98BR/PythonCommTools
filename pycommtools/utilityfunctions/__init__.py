@@ -5,4 +5,4 @@ from .gray2bin import *
 from .qfunc import *
 from .convertSNR import *
 
-__all__ = ['bin2gay', 'bin2int', 'int2bin', 'gray2bin', 'qfunc', 'convertSNR']
+__all__ = ['bin2gray', 'bin2int', 'int2bin', 'gray2bin', 'qfunc', 'convertSNR']

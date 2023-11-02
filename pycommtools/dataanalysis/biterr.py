@@ -57,10 +57,10 @@ def biterr(x, y, k=None, flag=None):
 		raise ValueError("biterr: A and B must have the same size")
 	
 	if flag == 'row-wise':
-		numerrs = np.sum(int2bin(np.bitwise_xor(x, y), k).reshape(xr, xc), axis=1)
+		numerrs = np.sum(int2bin(np.bitwise_xor(x, y), k).reshape(-1, xc), axis=1)
 		total_bits = k * x.shape[0]
 	elif flag == 'column-wise':
-		numerrs = np.sum(int2bin(np.bitwise_xor(x, y), k).reshape(xr, xc), axis=0)
+		numerrs = np.sum(int2bin(np.bitwise_xor(x, y), k).reshape(xr, -1), axis=0)
 		total_bits = k * x.shape[-1]
 	else:  # flag == 'overall'
 		numerrs = np.sum(int2bin(np.bitwise_xor(x, y), k))

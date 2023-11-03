@@ -21,6 +21,6 @@ def berawgn(EbNo, modtype, M):
     h2 = 1
     g = 3 * gamma_b * np.log2(M) / (M - 1)
   else:
-    raise ValueError()
+    raise ValueError("BERAWGN: Invalid modulation type")
 
   return h1 * qfunc(h2 * np.sqrt(g))

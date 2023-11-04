@@ -1,4 +1,4 @@
 from .biterr import *
 from .berawgn import *
-
-__all__ = ['biterr', 'berawgn']
+from .snrawgn import *
+__all__ = ['biterr', 'berawgn', 'snrawgn']

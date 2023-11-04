@@ -17,7 +17,7 @@ def berawgn(EbNo, modtype, M):
     h2 = np.sin(np.pi / M)
     g = 2 * gamma_b * np.log2(M)
   elif modtype.upper() == "QAM":
-    h1 = 4 / np.log2(M)
+    h1 = 4 / np.log2(M) * (1 - 1 / np.sqrt(M))
     h2 = 1
     g = 3 * gamma_b * np.log2(M) / (M - 1)
   else:

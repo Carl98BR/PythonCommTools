@@ -1,6 +1,6 @@
 from PythonCommTools.pycommtools.utilityfunctions import *
 import numpy as np
-from scipy.spetial import erfc
+from scipy.special import erfc
 
 def berawgn(EbNo, modtype, M):
   def Pb(k, gamma, M):

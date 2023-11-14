@@ -18,7 +18,7 @@ A função `wgn()` gera ruído branco gaussiano aditivo. É frequentemente usada
 
 Demonstração do comportamento de um canal de comunicação com adição de ruído.
 
-![Scatterplot 64-QAM + wgn / SNR = 5dB](images/64cosawgn.png)
+![Scatterplot 64-QAM + wgn / SNR = 5dB](images/64consawgn.png)
 
 ## Funções BERAWGN e SERAWGN
 

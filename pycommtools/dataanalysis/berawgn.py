@@ -1,5 +1,7 @@
 from PythonCommTools.pycommtools.utilityfunctions import *
 import numpy as np
+from scipy.spetial import erfc
+
 def berawgn(EbNo, modtype, M):
   def Pb(k, gamma, M):
     return 1 / np.sqrt(M) * np.sum([w(i, k, M) * erfc((2 * i + 1) * np.sqrt(3 / 2 * np.log2(M) * gamma / (M - 1))) for i in range(int((1 - 2 ** (-k)) * np.sqrt(M)))])

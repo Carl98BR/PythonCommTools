@@ -32,4 +32,4 @@ As funções `berawgn()` e `serawgn()` são usadas para calcular a Taxa de Erro 
 
 Esta seção demonstra uma implementação para calcular o Erro de Símbolo em relação à relação sinal-ruído (Eb/No) para diferentes modulações M-ária.
 
-![Bit Error Rate vs. Eb/No](path/para/imagem6.png)
+![Bit Error Rate vs. Eb/No](images/qamthxex.png)

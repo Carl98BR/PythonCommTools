@@ -1,6 +1,6 @@
 import numpy as np
 
-def qammod(signal, M, symorder='gray'):
+def qammod(signal, M, symorder='gray', UnitAveragePower=False):
   # Check if M is a perfect square and a power of 2
   if not (M and (M & (M - 1) == 0) and int(np.sqrt(M)) == np.sqrt(M)):
     raise ValueError("qammod: M must be a perfect square and a power of 2.")
@@ -16,7 +16,10 @@ def qammod(signal, M, symorder='gray'):
   x = -np.sqrt(M) + 1 + 2 * np.arange(0, np.sqrt(M))
   I, Q = np.meshgrid(x, x)
   constellation = np.reshape(I - 1j * Q, M, order='F')
-  
+
+  if UnitAveragePower:
+    constellation /= np.mean(abs(constellation) ** 2)
+
   if symorder.lower() == "bin":
     # Map the signal using binary symbol order
     return constellation[signal]

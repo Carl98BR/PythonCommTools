@@ -18,7 +18,7 @@ def qammod(signal, M, symorder='gray', UnitAveragePower=False):
   constellation = np.reshape(I - 1j * Q, M, order='F')
 
   if UnitAveragePower:
-    constellation /= np.mean(abs(constellation) ** 2)
+    constellation /= np.sqrt(np.mean(abs(constellation) ** 2))
 
   if symorder.lower() == "bin":
     # Map the signal using binary symbol order

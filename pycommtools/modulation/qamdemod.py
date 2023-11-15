@@ -4,7 +4,7 @@ from .qammod import *
 
 def qamdemod(modulated_signal, M, symorder='gray'):
   # Create a QAM constellation based on the specified 'symorder'
-  constellation = qammod(np.arange(0, M), M, symorder)
+  constellation = qammod(np.arange(0, M), M, symorder, UnitAveragePower)
   
   # Extract the real and imaginary parts of the constellation and modulated signals
   constellation = np.column_stack((np.real(constellation), np.imag(constellation)))

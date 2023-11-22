@@ -1,3 +1,4 @@
+import numpy as np
 def acceptance_rejection_sampler(pdf_function, domain_values, n_samples, *args):
 
   pdf_values = pdf_function(domain_values, *args)
